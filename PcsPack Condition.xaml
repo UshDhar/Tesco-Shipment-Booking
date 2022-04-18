@@ -1,0 +1,358 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="teat1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="PcsPck" Type="InArgument(x:Int32)" />
+    <x:Property Name="QTY" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1126,1707</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>teat1_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PcsPak Condition" sap:VirtualizedContainerService.HintSize="982,1642" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  qtyUnitId0'" sap:VirtualizedContainerService.HintSize="940,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="PCS">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="32">
+          <x:String></x:String>
+          <x:String>PCS</x:String>
+          <x:String>PRS</x:String>
+          <x:String>PKS</x:String>
+          <x:String>PIECE</x:String>
+          <x:String>PACK</x:String>
+          <x:String>2 PACK</x:String>
+          <x:String>3 PACK</x:String>
+          <x:String>4 PACK</x:String>
+          <x:String>5 PACK</x:String>
+          <x:String>6 PACK</x:String>
+          <x:String>7 PACK</x:String>
+          <x:String>8 PACK</x:String>
+          <x:String>9 PACK</x:String>
+          <x:String>10 PACK</x:String>
+          <x:String>11 PACK</x:String>
+          <x:String>12 PACK</x:String>
+          <x:String>13 PACK</x:String>
+          <x:String>14 PACK</x:String>
+          <x:String>15 PACK</x:String>
+          <x:String>16 PACK</x:String>
+          <x:String>17 PACK</x:String>
+          <x:String>18 PACK</x:String>
+          <x:String>19 PACK</x:String>
+          <x:String>20 PACK</x:String>
+          <x:String>PKG</x:String>
+          <x:String>22 PACK</x:String>
+          <x:String>21 PACK</x:String>
+          <x:String>23 PACK</x:String>
+          <x:String>24 PACK</x:String>
+          <x:String>25 PACK</x:String>
+          <x:String>SET</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ed60275-9319-4431-b9d2-5609c675a304" InformativeScreenshot="e256e5b1ba77ecb092ccfb70a57247ce" Selector="&lt;html app='chrome.exe' title='Shipper' /&gt;&lt;webctrl id='applicationIframe' tag='IFRAME' /&gt;&lt;webctrl id='table14' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="940,1202" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+      <ui:IfElseIf.ConditionBlocks>
+        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+          <ui:IfElseIfBlock BlockType="If" Condition="[PcsPck=1]">
+            <ui:IfElseIfBlock.Then>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="889,465" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[QTY&gt;=1000]" sap:VirtualizedContainerService.HintSize="847,373" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence DisplayName="Sequence for selecting Pack" sap:VirtualizedContainerService.HintSize="401,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  qtyUnitId0'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="PACK">
+                        <ui:SelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="32">
+                            <x:String></x:String>
+                            <x:String>PCS</x:String>
+                            <x:String>PRS</x:String>
+                            <x:String>PKS</x:String>
+                            <x:String>PIECE</x:String>
+                            <x:String>PACK</x:String>
+                            <x:String>2 PACK</x:String>
+                            <x:String>3 PACK</x:String>
+                            <x:String>4 PACK</x:String>
+                            <x:String>5 PACK</x:String>
+                            <x:String>6 PACK</x:String>
+                            <x:String>7 PACK</x:String>
+                            <x:String>8 PACK</x:String>
+                            <x:String>9 PACK</x:String>
+                            <x:String>10 PACK</x:String>
+                            <x:String>11 PACK</x:String>
+                            <x:String>12 PACK</x:String>
+                            <x:String>13 PACK</x:String>
+                            <x:String>14 PACK</x:String>
+                            <x:String>15 PACK</x:String>
+                            <x:String>16 PACK</x:String>
+                            <x:String>17 PACK</x:String>
+                            <x:String>18 PACK</x:String>
+                            <x:String>19 PACK</x:String>
+                            <x:String>20 PACK</x:String>
+                            <x:String>PKG</x:String>
+                            <x:String>22 PACK</x:String>
+                            <x:String>21 PACK</x:String>
+                            <x:String>23 PACK</x:String>
+                            <x:String>24 PACK</x:String>
+                            <x:String>25 PACK</x:String>
+                            <x:String>SET</x:String>
+                          </scg:List>
+                        </ui:SelectItem.Items>
+                        <ui:SelectItem.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee136cdb-1ebc-4109-80b4-5f6acfe96680" InformativeScreenshot="e256e5b1ba77ecb092ccfb70a57247ce" Selector="&lt;html app='chrome.exe' title='Shipper' /&gt;&lt;webctrl id='applicationIframe' tag='IFRAME' /&gt;&lt;webctrl id='table14' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SelectItem.Target>
+                      </ui:SelectItem>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Sequence for selecting Pcs" sap:VirtualizedContainerService.HintSize="401,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  qtyUnitId0'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="PCS">
+                        <ui:SelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="32">
+                            <x:String></x:String>
+                            <x:String>PCS</x:String>
+                            <x:String>PRS</x:String>
+                            <x:String>PKS</x:String>
+                            <x:String>PIECE</x:String>
+                            <x:String>PACK</x:String>
+                            <x:String>2 PACK</x:String>
+                            <x:String>3 PACK</x:String>
+                            <x:String>4 PACK</x:String>
+                            <x:String>5 PACK</x:String>
+                            <x:String>6 PACK</x:String>
+                            <x:String>7 PACK</x:String>
+                            <x:String>8 PACK</x:String>
+                            <x:String>9 PACK</x:String>
+                            <x:String>10 PACK</x:String>
+                            <x:String>11 PACK</x:String>
+                            <x:String>12 PACK</x:String>
+                            <x:String>13 PACK</x:String>
+                            <x:String>14 PACK</x:String>
+                            <x:String>15 PACK</x:String>
+                            <x:String>16 PACK</x:String>
+                            <x:String>17 PACK</x:String>
+                            <x:String>18 PACK</x:String>
+                            <x:String>19 PACK</x:String>
+                            <x:String>20 PACK</x:String>
+                            <x:String>PKG</x:String>
+                            <x:String>22 PACK</x:String>
+                            <x:String>21 PACK</x:String>
+                            <x:String>23 PACK</x:String>
+                            <x:String>24 PACK</x:String>
+                            <x:String>25 PACK</x:String>
+                            <x:String>SET</x:String>
+                          </scg:List>
+                        </ui:SelectItem.Items>
+                        <ui:SelectItem.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9428ad7d-25f6-4c18-85da-40f724ff5ece" InformativeScreenshot="e256e5b1ba77ecb092ccfb70a57247ce" Selector="&lt;html app='chrome.exe' title='Shipper' /&gt;&lt;webctrl id='applicationIframe' tag='IFRAME' /&gt;&lt;webctrl id='table14' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SelectItem.Target>
+                      </ui:SelectItem>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[PcsPck = 0]">
+            <ui:IfElseIfBlock.Then>
+              <Sequence DisplayName="Error Message" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Iuput Data is not Correct&quot;]" />
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+          <ui:IfElseIfBlock BlockType="Else">
+            <ui:IfElseIfBlock.Then>
+              <Sequence DisplayName="Selecting Pack" sap:VirtualizedContainerService.HintSize="401,226" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  qtyUnitId0'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="PACK">
+                  <ui:SelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="32">
+                      <x:String></x:String>
+                      <x:String>PCS</x:String>
+                      <x:String>PRS</x:String>
+                      <x:String>PKS</x:String>
+                      <x:String>PIECE</x:String>
+                      <x:String>PACK</x:String>
+                      <x:String>2 PACK</x:String>
+                      <x:String>3 PACK</x:String>
+                      <x:String>4 PACK</x:String>
+                      <x:String>5 PACK</x:String>
+                      <x:String>6 PACK</x:String>
+                      <x:String>7 PACK</x:String>
+                      <x:String>8 PACK</x:String>
+                      <x:String>9 PACK</x:String>
+                      <x:String>10 PACK</x:String>
+                      <x:String>11 PACK</x:String>
+                      <x:String>12 PACK</x:String>
+                      <x:String>13 PACK</x:String>
+                      <x:String>14 PACK</x:String>
+                      <x:String>15 PACK</x:String>
+                      <x:String>16 PACK</x:String>
+                      <x:String>17 PACK</x:String>
+                      <x:String>18 PACK</x:String>
+                      <x:String>19 PACK</x:String>
+                      <x:String>20 PACK</x:String>
+                      <x:String>PKG</x:String>
+                      <x:String>22 PACK</x:String>
+                      <x:String>21 PACK</x:String>
+                      <x:String>23 PACK</x:String>
+                      <x:String>24 PACK</x:String>
+                      <x:String>25 PACK</x:String>
+                      <x:String>SET</x:String>
+                    </scg:List>
+                  </ui:SelectItem.Items>
+                  <ui:SelectItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee136cdb-1ebc-4109-80b4-5f6acfe96680" InformativeScreenshot="e256e5b1ba77ecb092ccfb70a57247ce" Selector="&lt;html app='chrome.exe' title='Shipper' /&gt;&lt;webctrl id='applicationIframe' tag='IFRAME' /&gt;&lt;webctrl id='table14' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SelectItem.Target>
+                </ui:SelectItem>
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+        </sc:BindingList>
+      </ui:IfElseIf.ConditionBlocks>
+    </ui:IfElseIf>
+    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Packages" sap:VirtualizedContainerService.HintSize="940,134" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="CARTONS">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>PACKAGES</x:String>
+          <x:String>CARTONS</x:String>
+          <x:String>PIECES</x:String>
+          <x:String>BUNDLES</x:String>
+          <x:String>PALLETS</x:String>
+          <x:String>CASES</x:String>
+          <x:String>SETS</x:String>
+          <x:String>BAGS</x:String>
+          <x:String>BOXES</x:String>
+          <x:String>CRATES</x:String>
+          <x:String>ROLLS</x:String>
+          <x:String>LBS</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dc49cb5-fe44-4cf5-b23c-cc9d9a35a701" InformativeScreenshot="ec35d461ccfb47a4b8e8fd2435bf17dc" Selector="&lt;html app='chrome.exe' title='Shipper' /&gt;&lt;webctrl id='applicationIframe' tag='IFRAME' /&gt;&lt;webctrl id='table14' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+  </Sequence>
+</Activity>
